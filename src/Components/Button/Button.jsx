@@ -25,7 +25,6 @@ const StyledButton = styled.button`
 
 const Button = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
-
 	return (
 		<>
 			<StyledButton
@@ -36,7 +35,7 @@ const Button = (props) => {
 				{props.innerText}
 			</StyledButton>
 
-			{isOpen && <ModalCard item={props.item[4]} />}
+			{isOpen && <ModalCard item={props.item[3]} />}
 		</>
 	);
 };

@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
-
 import './App.css';
 import Card from './Components/Card/Card';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+
 import Button from './Components/Button/Button';
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
 						<Card key={index} item={item} />
 					))}
 				</div>
-				<Button item={listProducts} innerText='Buy cheapest' />
+				<Button items={listProducts} innerText='Buy cheapest' />
 			</div>
 		</>
 	);
