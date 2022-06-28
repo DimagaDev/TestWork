@@ -63,7 +63,8 @@ function App() {
 	useEffect(() => {
 		axios({
 			method: 'GET',
-			url: 'https://run.mocky.io/v3/b7d36eea-0b3f-414a-ba44-711b5f5e528e',
+			url: 'http://localhost:3002/',
+			// url: 'https://run.mocky.io/v3/b7d36eea-0b3f-414a-ba44-711b5f5e528e',
 		}).then((response) => {
 			setListProducns(response.data.slice(0, 6));
 		});

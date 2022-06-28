@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import OrderButton from '../Button/OrderButton';
+import axios from 'axios';
 
 const CustomForm = styled.form`
 	display: flex;
@@ -47,7 +48,20 @@ const Form = () => {
 		// watch,
 		formState: { errors },
 	} = useForm();
-	const onSubmit = (data) => console.log(data);
+
+	const onSubmit = (data) => {
+		axios({
+			method: 'POST',
+			url: 'http://localhost:3002/send',
+			data: data,
+		}).then((response) => {
+			if (response.data.status === 'success') {
+				alert('Message success...');
+			} else if (response.data.status === 'fail') {
+				alert('Message failed...');
+			}
+		});
+	};
 
 	// console.log(watch('example'));
 
