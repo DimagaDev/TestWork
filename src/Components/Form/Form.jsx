@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import OrderButton from '../Button/OrderButton';
@@ -28,20 +28,23 @@ const CustomInput = styled.input`
 `;
 
 const ButtonClear = styled.button`
-	position: absolute;
+	position: fixed;
+	border: none;
+	background: transparent;
 	width: 24px;
 	height: 24px;
-	background: #e43f3f;
-	content: 'X';
+	top: 302px;
+	left: 290px;
+	&::before {
+		content: url('./ClearInput.svg');
+	}
 `;
 
 const Form = () => {
-	const [errorInput, setErrorInput] = useState(false);
-
 	const {
 		register,
 		handleSubmit,
-		watch,
+		// watch,
 		formState: { errors },
 	} = useForm();
 	const onSubmit = (data) => console.log(data);
@@ -51,6 +54,7 @@ const Form = () => {
 	return (
 		<CustomForm onSubmit={handleSubmit(onSubmit)}>
 			<CustomInput
+				id='NameInput'
 				style={{ border: errors.Name && '1px solid red' }}
 				placeholder='Name'
 				{...register('Name', {
@@ -62,6 +66,9 @@ const Form = () => {
 				})}
 			/>
 			{errors.Name && <p>{errors.Name.message}</p>}
+			{errors.Name?.type === 'pattern' && (
+				<ButtonClear type='reset' onClick={() => {}} />
+			)}
 
 			<CustomInput
 				style={{ border: errors.Number && '1px solid red' }}
@@ -78,7 +85,6 @@ const Form = () => {
 			{errors.Number && <p>{errors.Number.message}</p>}
 
 			<OrderButton innerText='Order' />
-			{errorInput && <ButtonClear />}
 		</CustomForm>
 	);
 };

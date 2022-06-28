@@ -25,17 +25,29 @@ const StyledButton = styled.button`
 
 const Button = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
+
+	const hadlerClose = (state) => {
+		setIsOpen(state);
+	};
+
 	return (
 		<>
 			<StyledButton
 				onClick={() => {
 					setIsOpen(true);
+					console.log('click');
 				}}
 			>
 				{props.innerText}
 			</StyledButton>
 
-			{isOpen && <ModalCard item={props.item[3]} />}
+			{isOpen && (
+				<ModalCard
+					item={props.item}
+					isOpen={isOpen}
+					hadlerClose={hadlerClose}
+				/>
+			)}
 		</>
 	);
 };

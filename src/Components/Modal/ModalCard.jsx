@@ -34,7 +34,7 @@ const ModalWrapper = styled.div`
 Modal.setAppElement('#root');
 
 const ModalCard = (props) => {
-	console.log(props);
+	// console.log(props);
 
 	const [modalIsOpen, setIsOpen] = React.useState(props.isOpen);
 

@@ -7,33 +7,7 @@ button div {
 	font-style: normal;
 }
 
-.wrapper {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-}
-
-.wrapper_card {
-	width: 80%;
-	height: 65%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
 /* Modal style */
-
-/* .Modal {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	right: auto;
-	bottom: auto;
-	margin-right: -50%;
-	transform: translate(-50%, -50%);
-} */
 
 .Modal {
 	position: absolute;
@@ -71,7 +45,7 @@ p::before {
 }
 
 /* ------ old ---------- */
-.App-logo {
+/* .App-logo {
 	height: 40vmin;
 	pointer-events: none;
 }
@@ -104,4 +78,4 @@ p::before {
 	to {
 		transform: rotate(360deg);
 	}
-}
+} */
