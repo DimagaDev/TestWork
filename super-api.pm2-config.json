@@ -1,0 +1,10 @@
+{
+  "name" : "super-api",
+  "script": "build/server.js",
+  "instances": 1,
+  "max_memory_restart": "1000M",
+  "interpreter_args": "--max-old-space-size=1024",
+  "env_production": {
+    "NODE_ENV": "production"
+  }
+}
