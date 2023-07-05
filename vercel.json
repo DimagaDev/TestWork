@@ -12,6 +12,7 @@
     }
   ],
   "routes": [
+    { "src": "/assets.json", "dest": "build/assets.json" },
     { "src": "/favicon.ico", "dest": "build/public/favicon.ico" },
     { "src": "/robots.txt", "dest": "build/public/robots.txt" },
     { "src": "/static/(.*)", "dest": "build/public/static/$1" },
