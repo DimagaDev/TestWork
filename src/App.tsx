@@ -5,7 +5,6 @@ import Home from './Home';
 import { Lists } from './Lists';
 
 import './App.css';
-
 const App = () => (
   <Switch>
     <Route exact={true} path="/" component={Home} />
