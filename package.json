@@ -3,7 +3,6 @@
   "version": "4.2.15",
   "license": "MIT",
   "scripts": {
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && tsc -b && razzle build --noninteractive",
     "start": "node build/server.js"
   },
   "dependencies": {
