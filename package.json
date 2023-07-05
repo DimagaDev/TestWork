@@ -3,7 +3,7 @@
   "version": "4.2.15",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -b && razzle build",
+    "build": "tsc -b && razzle build --output public",
     "start": "node build/server.js"
   },
   "dependencies": {
