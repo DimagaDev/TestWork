@@ -4,7 +4,7 @@
 	"builds": [
 		{
 			"src": "build/public/**",
-			"use": "@vercel/static"
+			"use": "@now/static"
 		},
 		{
 			"src": "build/server.js",
@@ -18,5 +18,5 @@
 		{ "src": "/static/(.*)", "dest": "build/public/static/$1" },
 		{ "src": "/(.*)", "dest": "build/server.js" }
 	],
-	"outputDirectory": "build"
+	"outputDirectory": "build/"
 }
