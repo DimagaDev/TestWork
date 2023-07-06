@@ -22,7 +22,7 @@ const Home = () => {
                 setUsers(response.data)
             })
             .catch(function (error) {
-                console.log(error);
+                console.warn(error);
             })
     }, [])
 
