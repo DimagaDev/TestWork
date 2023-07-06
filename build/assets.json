@@ -1,14 +1,14 @@
 {
   "client": {
     "css": [
-      "/static/css/client.8b9a0874.css"
+      "/static/css/client.3bb1a288.css"
     ],
     "js": [
-      "/static/js/client.4a6ba316.js"
+      "/static/js/client.b472f965.js"
     ],
     "map": [
-      "/static/css/client.8b9a0874.css.map",
-      "/static/js/client.4a6ba316.js.map"
+      "/static/css/client.3bb1a288.css.map",
+      "/static/js/client.b472f965.js.map"
     ],
     "chunks": [
       0
@@ -20,7 +20,7 @@
     ],
     "txt": [
       "/robots.txt",
-      "/static/js/client.4a6ba316.js.LICENSE.txt"
+      "/static/js/client.b472f965.js.LICENSE.txt"
     ]
   }
 }

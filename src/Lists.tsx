@@ -19,7 +19,6 @@ export const Lists: React.FC<PropsList> = ({ type }) => {
     useEffect(() => {
         axios.get(`https://jsonplaceholder.typicode.com/users/${id}/${type}`)
             .then(function (response) {
-                console.log(response.data)
                 setAlbums(response.data)
             })
             .catch(function (error) {
