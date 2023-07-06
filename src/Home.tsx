@@ -5,21 +5,9 @@ import axios from "axios";
 
 import './Home.css';
 
-
 const Home = () => {
     const [users, setUsers] = useState([])
     const [search, setSearch] = useState('')
-    const [sort, setSort] = useState('')
-
-    useEffect(() => {
-        if(sort === 'asc'){
-
-        }
-        if(sort === 'desc'){
-
-        }
-        console.log(sort)
-    }, [sort])
 
     useEffect(() => {
         axios.get('https://jsonplaceholder.typicode.com/users')
