@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
 import Home from './Home';
 import { Lists } from './Lists';
@@ -7,11 +8,13 @@ import { Lists } from './Lists';
 import './App.css';
 
 const App = () => (
-  <Switch>
-    <Route exact={true} path="/" component={Home} />
+    <Router history={createBrowserHistory()}>
+    <Switch>
+      <Route exact={true} path="/" component={Home} />
       <Route exact={true} path="/albums/:id" children={<Lists type='albums' />} />
       <Route exact={true} path="/posts/:id" children={<Lists type='posts' />} />
-  </Switch>
+    </Switch>
+    </Router>
 );
 
 export default App;

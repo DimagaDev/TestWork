@@ -12,9 +12,15 @@ interface PropsList {
 type QuizParams = {
     id: string;
 };
+
+type ListParams = {
+    id: string;
+    title: string;
+    body?: string;
+}[];
 export const Lists: React.FC<PropsList> = ({ type }) => {
     const { id } = useParams<QuizParams>();
-    const [albums, setAlbums] = useState([])
+    const [albums, setAlbums] = useState<ListParams>([])
 
     useEffect(() => {
         axios.get(`https://jsonplaceholder.typicode.com/users/${id}/${type}`)
@@ -29,7 +35,7 @@ export const Lists: React.FC<PropsList> = ({ type }) => {
     return (
         <div className="Home">
             {albums.map(user => (
-                <div className='userWrapper'>
+                <div className='userWrapper' key={user.id}>
                     <p>{user.id}. {user.title}</p>
                     {user.body && <p>{user.body}</p>}
                 </div>
